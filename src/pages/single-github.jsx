@@ -1,10 +1,11 @@
 import React from 'react'
 
-const SingleGithub = props => {
-  console.log(props.location.state.repo)
-  return (
+const SingleGithub = ({location}) => {
+
+  console.log(location.state, 'location.state')
+    return (
     <div>
-      <h2>SingleGithub</h2>
+      <h2>{location.state.repo?.name}</h2>
       <table border={1}>
         <thead>
           <th>
@@ -13,13 +14,25 @@ const SingleGithub = props => {
           <th>
             <tr>Repo URL</tr>
           </th>
+          <th>
+            <tr>Visibility</tr>
+          </th>
+          <th>
+            <tr>language</tr>
+          </th>
         </thead>
         <tbody>
           <td>
-            <tr>{props.location.state.repo?.name}</tr>
+            <tr>{location.state.repo?.name}</tr>
           </td>
           <td>
-            <tr>{props.location.state.repo?.html_url}</tr>
+            <tr>{location.state.repo?.html_url}</tr>
+          </td>
+           <td>
+            <tr>{location.state.repo?.visibility}</tr>
+          </td>
+          <td>
+            <tr>{location.state.repo?.language}</tr>
           </td>
         </tbody>
       </table>

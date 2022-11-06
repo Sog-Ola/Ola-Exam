@@ -22,6 +22,7 @@
     "vite": "^3.1.4"
   },
   "dependencies": {
+    "react-error-boundary": "^3.1.4",
     "react-router-dom": "^5.2.0"
   }
 }
