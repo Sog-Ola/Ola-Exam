@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom'
 const ListGithub = () => {
   const [page, setPage] = useState(1)
   const [allRepositories, setAllRepositories] = useState([])
-  const LIMIT = 5
+  const LIMIT = 2
 
   useEffect(() => {
     const fectchRepositories = async () => {
       const response = await fetch(
-        `https://api.github.com/users/suulola/repos?per_page=${LIMIT}&page=${page}`
+        `https://api.github.com/users/Sog-Ola/repos?per_page=${LIMIT}&page=${page}`
       )
 
       let data = await response.json()
